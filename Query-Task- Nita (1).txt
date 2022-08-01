@@ -1,0 +1,52 @@
+1.create a database with the name of flipkart
+=>CREATE DATABASE Flipcart
+
+2.create a table with the name of Feedback
+Fields are 
+id(int)
+name(varchar)
+surname(varchar)
+=>CREATE TABLE Feedback(id int PRIMARY KEY AUTO_INCREMENT, name varchar(255), surname varchar(255))
+
+3.Add More Fields with the name of 
+email(varchar)
+feedback(varchar)
+city (int)
+rating(int)(1 to 5)
+=>ALTER TABLE feedback ADD (email varchar(255), feedback varchar(255), city int, raiting int(1))
+
+4.Change the city data type from int to varchar
+=>ALTER TABLE feedback MODIFY city varchar(255)
+
+5.Insert Feedback Records 
+=>INSERT INTO feedback (name,surname,email, feedback,city, raiting) VALUES ('Nita','Vasara','Vasara@gmail.com','good','Rajkot', '1')
+=>INSERT INTO feedback (name,surname,email, feedback,city, raiting) VALUES ('Tina','Vara','Vara@gmail.com','very good','Porbandar', '3')
+=>INSERT INTO feedback (name,surname,email, feedback,city, raiting) VALUES ('Bharti','Sharma','Sharma@gmail.com','good','Porbandar', '4')
+=>INSERT INTO feedback (name,surname,email, feedback,city, raiting) VALUES ('Pratiksha','Katara','Katara@gmail.com','nice','Jamnagar', '2')
+=>INSERT INTO feedback (name,surname,email, feedback,city, raiting) VALUES ('Pooja','Singh','Singh@gmail.com','Good','Morbi', '3')
+
+6.Update the Feedback Records 
+=>UPDATE feedback SET name = ' Bhoomi' WHERE id='3'
+=>UPDATE feedback SET raiting = '4' WHERE id='4'
+=>UPDATE feedback SET email = ' Bhoomi@gmail.com' WHERE id='3'
+
+7.Insert one more feedback records
+=>INSERT INTO feedback (name,surname,email, feedback,city, raiting) VALUES ('Isha','Vora','Vora@gmail.com','Bad','Vadodra', '1')
+
+8.Delete one feedback records
+=>DELETE FROM feedback where id ='4'
+
+9.Arrange all Records with maximum to minimum rating
+=>SELECT raiting from feedback ORDER BY raiting DESC
+
+10.Fetch all the Users Name who gave rating
+=>SELECT name FROM feedback
+
+11.Truncate the Table
+=>TRUNCATE feedback
+
+12.Delete Record
+=>DROP TABLE feedback
+
+
+
